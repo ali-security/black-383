@@ -186,6 +186,7 @@ PIP_INDEX_URL="https://:2022-12-09T16:04:10.897261Z@time-machines-pypi.sealsecur
 
 [tool.cibuildwheel.windows.environment]
 PIP_INDEX_URL="https://:2022-12-09T16:04:10.897261Z@time-machines-pypi.sealsecurity.io/"
+CIBW_BUILD_VERBOSITY=1
 
 [tool.isort]
 atomic = true
