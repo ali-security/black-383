@@ -62,9 +62,7 @@ jobs:
       - name: Build wheels via cibuildwheel
         uses: pypa/cibuildwheel@v2.11.2
         env:
-          CIBW_BUILD_VERBOSITY: 1
           CIBW_ARCHS_MACOS: "${{ matrix.macos_arch }}"
-          CIBW_ENVIRONMENT: PIP_INDEX_URL="https://:2022-12-09T16:04:10.897261Z@time-machines-pypi.sealsecurity.io/"
 
       - name: Upload wheels as workflow artifacts
         uses: actions/upload-artifact@v3
