@@ -184,6 +184,9 @@ CC = "clang"
 AIOHTTP_NO_EXTENSIONS = "1"
 PIP_INDEX_URL="https://:2022-12-09T16:04:10.897261Z@time-machines-pypi.sealsecurity.io/"
 
+[tool.cibuildwheel.windows.environment]
+PIP_INDEX_URL="https://:2022-12-09T16:04:10.897261Z@time-machines-pypi.sealsecurity.io/"
+
 [tool.isort]
 atomic = true
 profile = "black"
