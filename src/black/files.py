@@ -211,7 +211,7 @@ def gen_python_files(
     extend_exclude: Optional[Pattern[str]],
     force_exclude: Optional[Pattern[str]],
     report: Report,
-    gitignore_dict: Optional[Dict[Path, PathSpec]] | Optional[PathSpec],
+    gitignore_dict: Optional[Dict[Path, PathSpec]],
     *,
     verbose: bool,
     quiet: bool,
