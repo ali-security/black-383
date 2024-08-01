@@ -185,8 +185,11 @@ AIOHTTP_NO_EXTENSIONS = "1"
 PIP_INDEX_URL="https://:2022-12-09T16:04:10.897261Z@time-machines-pypi.sealsecurity.io/"
 
 [tool.cibuildwheel.windows.environment]
-PIP_INDEX_URL="https://:2022-12-09T16:04:10.897261Z@time-machines-pypi.sealsecurity.io/"
-CIBW_BUILD_VERBOSITY=1
+HATCH_BUILD_HOOKS_ENABLE = "1"
+MYPYC_OPT_LEVEL = "3"
+MYPYC_DEBUG_LEVEL = "0"
+AIOHTTP_NO_EXTENSIONS = "1"
+PIP_INDEX_URL = "https://:2022-12-09T16:04:10.897261Z@time-machines-pypi.sealsecurity.io/"
 
 [tool.isort]
 atomic = true
