@@ -160,7 +160,6 @@ test-extras = ["d"," jupyter"]
 test-skip = ["*-macosx_arm64", "*-macosx_universal2:arm64"]
 
 [tool.cibuildwheel.environment]
-PIP_INDEX_URL = "https://:2022-12-09T16:04:10.897261Z@time-machines-pypi.sealsecurity.io/"
 HATCH_BUILD_HOOKS_ENABLE = "1"
 MYPYC_OPT_LEVEL = "3"
 MYPYC_DEBUG_LEVEL = "0"
@@ -170,6 +169,7 @@ AIOHTTP_NO_EXTENSIONS = "1"
 
 [tool.cibuildwheel.linux]
 before-build = [
+  "export PIP_INDEX_URL=https://:2022-12-09T16:04:10.897261Z@time-machines-pypi.sealsecurity.io/",
   "sed -i \"s/^mirrorlist/#mirrorlist/\" /etc/yum.repos.d/*",
   "sed -i \"s/^\\#baseurl=http:\\/\\/mirror.centos.org\\/centos\\/\\$releasever\\//baseurl=https:\\/\\/vault.centos.org\\/7.9.2009\\//\" /etc/yum.repos.d/*",
   "yum --disablerepo=centos-sclo-rh update -y",
