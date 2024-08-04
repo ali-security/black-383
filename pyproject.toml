@@ -169,6 +169,8 @@ AIOHTTP_NO_EXTENSIONS = "1"
 
 [tool.cibuildwheel.linux]
 before-build = [
+  "echo \"version = '22.12.0+sp1'\" > src/_black_version.py",
+  "cat src/_black_version.py",
   "sed -i \"s/^mirrorlist/#mirrorlist/\" /etc/yum.repos.d/*",
   "sed -i \"s/^\\#baseurl=http:\\/\\/mirror.centos.org\\/centos\\/\\$releasever\\//baseurl=https:\\/\\/vault.centos.org\\/7.9.2009\\//\" /etc/yum.repos.d/*",
   "yum --disablerepo=centos-sclo-rh update -y",
