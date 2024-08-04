@@ -66,9 +66,9 @@ jobs:
         with:
           name: ${{ matrix.name }}-mypyc-wheels
           path: |
-          ./wheelhouse/*.tar.gz
-          ./wheelhouse/*.whl
-          ./wheelhouse/*.tar
+            ./wheelhouse/*.tar.gz
+            ./wheelhouse/*.whl
+            ./wheelhouse/*.tar
 
   update-stable-branch:
     name: Update stable branch
