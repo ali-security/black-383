@@ -65,7 +65,10 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: ${{ matrix.name }}-mypyc-wheels
-          path: ./wheelhouse/*.whl
+          path: |
+          ./wheelhouse/*.tar.gz
+          ./wheelhouse/*.whl
+          ./wheelhouse/*.tar
 
   update-stable-branch:
     name: Update stable branch
