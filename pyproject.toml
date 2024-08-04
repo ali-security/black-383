@@ -101,6 +101,7 @@ fragments = [
 
 [tool.hatch.version]
 source = "vcs"
+scheme = "pep440"
 
 [tool.hatch.build.hooks.vcs]
 version-file = "src/_black_version.py"
