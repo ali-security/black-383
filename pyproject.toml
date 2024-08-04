@@ -100,7 +100,7 @@ fragments = [
 ]
 
 [tool.hatch.version]
-source = "vcs"
+path = "src/_black_version.py"
 
 [tool.hatch.build.hooks.vcs]
 version-file = "src/_black_version.py"
