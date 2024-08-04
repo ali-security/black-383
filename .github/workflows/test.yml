@@ -76,6 +76,9 @@ jobs:
     runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@v3
+      - name: Create version file
+        run: |
+          echo "version = '22.12.0+sp1'" > src/_black_version.py
       - name: Send finished signal to Coveralls
         uses: AndreMiras/coveralls-python-action@v20201129
         with:
@@ -94,6 +97,9 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
+      - name: Create version file
+        run: |
+          echo "version = '22.12.0+sp1'" > src/_black_version.py
 
       - name: Set up latest Python
         uses: MatteoH2O1999/setup-python@v4
