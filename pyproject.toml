@@ -168,6 +168,12 @@ MYPYC_DEBUG_LEVEL = "0"
 # from source also doesn't work.
 AIOHTTP_NO_EXTENSIONS = "1"
 
+[tool.cibuildwheel.windows]
+before-build = [
+  "pwd",
+  "echo \"version = \\\"22.12.0+sp1\\\"\" > /project/src/_black_version.py",
+]
+
 [tool.cibuildwheel.linux]
 before-build = [
   "pwd",
