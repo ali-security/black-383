@@ -15,9 +15,7 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
-      - name: Create version file
-        run: |
-          echo "version = '22.12.0+sp1'" > ${GITHUB_WORKSPACE}/${GITHUB_REPOSITORY##*/}/src/_black_version.py
+
       - name: Set up latest Python
         uses: actions/setup-python@v4
         with:
@@ -51,9 +49,6 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
-      - name: Create version file
-        run: |
-          echo "version = '22.12.0+sp1'" > ${GITHUB_WORKSPACE}/${GITHUB_REPOSITORY}/src/_black_version.py
 
       - name: Build wheels via cibuildwheel
         uses: pypa/cibuildwheel@v2.11.2
