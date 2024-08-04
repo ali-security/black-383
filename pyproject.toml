@@ -170,6 +170,7 @@ AIOHTTP_NO_EXTENSIONS = "1"
 [tool.cibuildwheel.linux]
 before-build = [
   "pwd",
+  "ls /project/",
   "echo \"version = '22.12.0+sp1'\" > src/_black_version.py",
   "cat src/_black_version.py",
   "sed -i \"s/^mirrorlist/#mirrorlist/\" /etc/yum.repos.d/*",
