@@ -101,7 +101,7 @@ fragments = [
 
 [tool.hatch.version]
 path = "src/_black_version.py"
-pattern = "version = '(?P<version>[^']+)'"
+pattern = "version = ['|\"](?P<version>[^']+)['|\"]"
 
 [tool.hatch.build.hooks.vcs]
 version-file = "src/_black_version.py"
