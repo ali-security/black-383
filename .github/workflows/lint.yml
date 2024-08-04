@@ -1,7 +1,7 @@
 name: Lint
 
 on:
-  workflow_dispatch:
+  push:
 
 jobs:
   build:
@@ -16,6 +16,9 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
+      - name: Create version file
+        run: |
+          echo "version = '22.12.0+sp1'" > src/_black_version.py
 
       - name: Set up latest Python
         uses: MatteoH2O1999/setup-python@v4
